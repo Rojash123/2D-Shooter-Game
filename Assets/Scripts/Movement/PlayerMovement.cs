@@ -11,7 +11,11 @@ public class PlayerMovement : Singleton<PlayerMovement>
     Vector3 offset,initialPoint,initialPlayerPosition;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    [SerializeField] GameObject spawnPosition,bulletPrefab;
+
+    [SerializeField]
+    GameObject[] spawnPosition;
+
+    [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform bulletPoolParent;
 
     bool CanSwipe,initalPointSet;
@@ -25,6 +29,8 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     private List<Bullets> bulletPool=new List<Bullets>();
     [SerializeField]private int poolSize = 50;
+
+    [SerializeField] public int bulletValue;
 
 
     private void Awake()
@@ -107,11 +113,14 @@ public class PlayerMovement : Singleton<PlayerMovement>
             if(Time.time >= fireTime+1/fireRate)
             {
                 fireTime =Time.time;
-                var bullet=bulletPool[0].gameObject;
-                bullet.transform.position = spawnPosition.transform.position;
-                bullet.gameObject.SetActive(true);
-                bulletPool.RemoveAt(0);
-                bullet.GetComponent<Bullets>().canMoveForward = true;
+                for (int i = 0; i <= bulletValue; i++)
+                {
+                    var bullet = bulletPool[i].gameObject;
+                    bullet.transform.position = spawnPosition[i].transform.position;
+                    bullet.gameObject.SetActive(true);
+                    bulletPool.RemoveAt(i);
+                    bullet.GetComponent<Bullets>().canMoveForward = true;
+                }
             }
         }
     }
