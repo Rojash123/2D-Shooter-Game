@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMoveForward: 0
+  damageAmount: 35
 --- !u!61 &4820674083628982490
 BoxCollider2D:
   m_ObjectHideFlags: 0

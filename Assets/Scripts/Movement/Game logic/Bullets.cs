@@ -6,6 +6,7 @@ using UnityEngine;
 public class Bullets:MonoBehaviour
 {
     public bool canMoveForward;
+    public float damageAmount;
     private void Update()
     {
         if (canMoveForward)
@@ -18,6 +19,7 @@ public class Bullets:MonoBehaviour
         IDamageable target = other.GetComponent<IDamageable>();
         if (target != null)
         {
+            target.Damage(damageAmount);
             PlayerMovement.Instance.GoBackToPoll(this.gameObject);
             canMoveForward = false;
         }
