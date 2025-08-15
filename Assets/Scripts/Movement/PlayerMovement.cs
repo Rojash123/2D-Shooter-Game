@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,7 +9,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
 {
     public PlayerController controller;
     Camera mainCamera;
-    Vector3 offset,initialPoint,initialPlayerPosition;
+    Vector3 offset, initialPoint, initialPlayerPosition;
     [SerializeField] SpriteRenderer spriteRenderer;
 
 
@@ -16,22 +17,23 @@ public class PlayerMovement : Singleton<PlayerMovement>
     GameObject[] spawnPosition;
 
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] Transform bulletPoolParent;
-
-    bool CanSwipe,initalPointSet;
+    [SerializeField] Transform bulletPoolParent, cometPoolParent;
+   
+    bool CanSwipe, initalPointSet;
     [SerializeField] bool canFireBullets;
 
-    [Range(50,100)]
+    [Range(50, 100)]
     [SerializeField] float movementSpeed;
     public float bulletSpeed;
-    [SerializeField] float fireRate,fireTime;
+    [SerializeField] float fireRate, fireTime;
 
+    public Action<Comets,typeOfComet> OnCometDestroyed;
 
-    private List<Bullets> bulletPool=new List<Bullets>();
-    [SerializeField]private int poolSize = 50;
-
+    private List<Bullets> bulletPool = new List<Bullets>();
+    [SerializeField] private int poolSize = 50;
     [SerializeField] public int bulletValue;
 
+    [SerializeField] CometSpawnner spawnner;
 
     private void Awake()
     {
@@ -60,7 +62,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
         controller.Movement.Touch.started += ctx => StartMovement(ctx);
         controller.Movement.Touch.canceled += ctx => EndMovement(ctx);
     }
-    
+
     void StartMovement(InputAction.CallbackContext context)
     {
         Vector2 screenPos = controller.Movement.Position.ReadValue<Vector2>();
@@ -75,9 +77,9 @@ public class PlayerMovement : Singleton<PlayerMovement>
         initalPointSet = false;
         CanSwipe = false;
     }
-    void MovementHandle() 
+    void MovementHandle()
     {
-        if (CanSwipe) 
+        if (CanSwipe)
         {
             Vector2 screenPosition = controller.Movement.LivePosition.ReadValue<Vector2>();
             Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, mainCamera.nearClipPlane));
@@ -89,8 +91,8 @@ public class PlayerMovement : Singleton<PlayerMovement>
             }
             var targetPosition = (worldPosition - initialPoint);
 
-            float xWidth=spriteRenderer.bounds.extents.x;
-            float yWidth =spriteRenderer.bounds.extents.y;
+            float xWidth = spriteRenderer.bounds.extents.x;
+            float yWidth = spriteRenderer.bounds.extents.y;
 
             Vector3 bottomLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
             Vector3 topRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, mainCamera.nearClipPlane));
@@ -99,10 +101,10 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
             // Clamp the new position within the screen bounds
             newPosition.x = Mathf.Clamp(newPosition.x, bottomLeft.x, topRight.x);
-            newPosition.y = Mathf.Clamp(newPosition.y, bottomLeft.y, topRight.y-yWidth*1.5f);
+            newPosition.y = Mathf.Clamp(newPosition.y, bottomLeft.y, topRight.y - yWidth * 1.5f);
 
 
-            transform.position = Vector2.Lerp(transform.position,newPosition, movementSpeed * Time.deltaTime);
+            transform.position = Vector2.Lerp(transform.position, newPosition, movementSpeed * Time.deltaTime);
         }
     }
     // Update is called once per frame
@@ -110,9 +112,10 @@ public class PlayerMovement : Singleton<PlayerMovement>
     {
         if (canFireBullets)
         {
-            if(Time.time >= fireTime+1/fireRate)
+            spawnner.StartSpawnning();
+            if (Time.time >= fireTime + 1 / fireRate)
             {
-                fireTime =Time.time;
+                fireTime = Time.time;
                 for (int i = 0; i <= bulletValue; i++)
                 {
                     var bullet = bulletPool[i].gameObject;
@@ -127,14 +130,21 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     private void initialiZePool()
     {
-        for (int i = 0; i < poolSize; i++) 
+        InitializeBulletPool();
+    }
+
+    void InitializeBulletPool()
+    {
+        for (int i = 0; i < poolSize; i++)
         {
-            GameObject bullet = GameObject.Instantiate(bulletPrefab, bulletPoolParent) ;
+            GameObject bullet = GameObject.Instantiate(bulletPrefab, bulletPoolParent);
             bullet.SetActive(false);
-            bullet.transform.localScale=Vector3.one;
+            bullet.transform.localScale = Vector3.one;
             bulletPool.Add(bullet.GetComponent<Bullets>());
         }
     }
+
+   
 
     public void GoBackToPoll(GameObject bullet)
     {
