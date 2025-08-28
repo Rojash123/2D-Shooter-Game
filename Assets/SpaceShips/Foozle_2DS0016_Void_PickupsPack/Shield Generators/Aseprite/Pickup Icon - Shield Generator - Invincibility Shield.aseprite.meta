@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 44
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.06666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -422,15 +443,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 84, y: 80}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1817088549
+    uuid:
+      value0: 2007674631
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 2007674631
     name: Pickup Icon - Shield Generator - Invincibility Shield
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -439,7 +466,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 697e85f6a96b054498bfb01b94a851f7
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -448,7 +475,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: c1a69cfd5e2a2044faa69d950aece819
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -457,7 +484,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 561ea1c1036f0f34cb183482a01a26d8
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -466,7 +493,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: e927c5c460efa6448a52b03e433897a3
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -475,7 +502,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 15b4d2b7deea93144a3f7851b341d0da
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -484,7 +511,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: cd66f97e3607bb5478c9ac24730297c0
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -493,7 +520,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 82b51a602bf2ce242b496cea566f2404
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -502,7 +529,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 6351fed00e8a6474099b45d3a94cefaf
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -511,7 +538,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 8e462ecbe5e3cbc4fa2e3bc5fb41d1f4
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -520,7 +547,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 5120f5c17ba07e746a416eafdc48d794
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -529,7 +556,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: abc9b752dced6ac42911e7a1afcc2497
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -538,7 +565,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: e64c6384cb947d34c8b9cc74b453a375
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -547,7 +574,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: 0b1ddc0812500344a92a58ba727fe24d
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -556,7 +583,7 @@ ScriptedImporter:
         width: 32
         height: 30
       spriteId: a5f56fb5ff81be8468ddc466a54f99f1
-    - name: Pickup Icon - Shield Generator - Invincibility Shield_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -566,9 +593,13 @@ ScriptedImporter:
         height: 30
       spriteId: 561ca68b504a3f549b95880fc2926034
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
+  previousTextureSize: {x: 128, y: 256}

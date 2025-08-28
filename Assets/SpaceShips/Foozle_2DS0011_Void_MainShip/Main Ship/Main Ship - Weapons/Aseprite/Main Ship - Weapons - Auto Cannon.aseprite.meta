@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.94117653}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 71
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 75
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.53846157, y: -0.5925926}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 41
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5172414, y: -0.5925926}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.44444445, y: -0.76190484}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 36
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.94117653}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -262,15 +275,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 71}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1149162702
+    uuid:
+      value0: 1690589574
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1690589574
     name: Main Ship - Weapons - Auto Cannon
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Main Ship - Weapons - Auto Cannon_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -279,7 +298,7 @@ ScriptedImporter:
         width: 24
         height: 17
       spriteId: 7790eb57cdabce646b4b5c66af4ae5ea
-    - name: Main Ship - Weapons - Auto Cannon_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -288,7 +307,7 @@ ScriptedImporter:
         width: 24
         height: 24
       spriteId: 28ff11c22899055498f52bd929d9c25d
-    - name: Main Ship - Weapons - Auto Cannon_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -297,7 +316,7 @@ ScriptedImporter:
         width: 24
         height: 26
       spriteId: ce844c4c37413ad4dbd520ddfca05394
-    - name: Main Ship - Weapons - Auto Cannon_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -306,7 +325,7 @@ ScriptedImporter:
         width: 26
         height: 27
       spriteId: b77db19894cf0e6468e9844eecba7e35
-    - name: Main Ship - Weapons - Auto Cannon_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -315,7 +334,7 @@ ScriptedImporter:
         width: 29
         height: 27
       spriteId: 659533f4bf23176479cb0a21531cfe4d
-    - name: Main Ship - Weapons - Auto Cannon_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -324,7 +343,7 @@ ScriptedImporter:
         width: 27
         height: 21
       spriteId: 17e55d26e3f37aa4bbfff50cc7c78fd3
-    - name: Main Ship - Weapons - Auto Cannon_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -334,9 +353,13 @@ ScriptedImporter:
         height: 17
       spriteId: d6c6b4923fa94e24d9d2605f70324e8d
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

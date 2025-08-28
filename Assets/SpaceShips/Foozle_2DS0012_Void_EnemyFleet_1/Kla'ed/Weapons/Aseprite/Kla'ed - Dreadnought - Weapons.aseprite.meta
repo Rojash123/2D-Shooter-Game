@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -586,6 +615,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -606,6 +636,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -626,6 +657,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -646,6 +678,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -666,6 +699,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -686,6 +720,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -706,6 +741,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -726,6 +762,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -746,6 +783,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -766,6 +804,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -786,6 +825,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -806,6 +846,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -826,6 +867,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 244
@@ -846,6 +888,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -866,6 +909,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -886,6 +930,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -906,6 +951,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -926,6 +972,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -946,6 +993,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -966,6 +1014,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -986,6 +1035,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -1006,6 +1056,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 324
@@ -1026,6 +1077,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1046,6 +1098,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1066,6 +1119,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1086,6 +1140,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1106,6 +1161,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1126,6 +1182,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1146,6 +1203,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1166,6 +1224,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1186,6 +1245,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 404
@@ -1206,6 +1266,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 484
@@ -1226,6 +1287,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 484
@@ -1246,6 +1308,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 484
@@ -1266,6 +1329,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 484
@@ -1286,6 +1350,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 484
@@ -1306,6 +1371,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.14999999}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 484
@@ -1322,15 +1388,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 484, y: 544}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1347589674
+    uuid:
+      value0: 4096838830
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -198128466
     name: Kla'ed - Dreadnought - Weapons
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Kla'ed - Dreadnought - Weapons_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -1339,7 +1411,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 82449e492b7ddf04db39f0f476f7dcd9
-    - name: Kla'ed - Dreadnought - Weapons_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -1348,7 +1420,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 3317d4e400891b442b9ca7130aa2ff2a
-    - name: Kla'ed - Dreadnought - Weapons_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -1357,7 +1429,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 803a0426bec279f428a34a75c7b6c7bb
-    - name: Kla'ed - Dreadnought - Weapons_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -1366,7 +1438,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 8684f71161e802e44a4b4c3a3ad0d08c
-    - name: Kla'ed - Dreadnought - Weapons_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -1375,7 +1447,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 14b5ccbcc296df74bb4b511e197d2762
-    - name: Kla'ed - Dreadnought - Weapons_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -1384,7 +1456,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: ef8bae23ed3c08d43b3b3b870323a807
-    - name: Kla'ed - Dreadnought - Weapons_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -1393,7 +1465,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: a45880178671d36458dc6bd4c6f8a9b6
-    - name: Kla'ed - Dreadnought - Weapons_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -1402,7 +1474,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: e98cb8f3e64568842bf1fdbe3a31c21e
-    - name: Kla'ed - Dreadnought - Weapons_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -1411,7 +1483,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 71698bd40d5eb354498af8b25564e900
-    - name: Kla'ed - Dreadnought - Weapons_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -1420,7 +1492,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 8f6e399ab5d9d3340a69dddf35905760
-    - name: Kla'ed - Dreadnought - Weapons_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -1429,7 +1501,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 4a347bbe719f08848af3388f5304eb56
-    - name: Kla'ed - Dreadnought - Weapons_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -1438,7 +1510,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: f7b6e584bac0066449c35add6af12dea
-    - name: Kla'ed - Dreadnought - Weapons_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -1447,7 +1519,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 20426d4cd490b3c45af323421b5384e1
-    - name: Kla'ed - Dreadnought - Weapons_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -1456,7 +1528,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 1b80c9240c975ef44abd4eba0206ac03
-    - name: Kla'ed - Dreadnought - Weapons_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -1465,7 +1537,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 318ec3e35d9334342ba0da8c1d1131ce
-    - name: Kla'ed - Dreadnought - Weapons_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -1474,7 +1546,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 075337da7a5da014f943ce1295f69b6f
-    - name: Kla'ed - Dreadnought - Weapons_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -1483,7 +1555,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: bf69ee53e701ec8468d42e080ae6540a
-    - name: Kla'ed - Dreadnought - Weapons_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -1492,7 +1564,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: b0a63d40847554f4897e7d7160738a13
-    - name: Kla'ed - Dreadnought - Weapons_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -1501,7 +1573,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 61c5af6ff341b1d41b2a03bb0f35414b
-    - name: Kla'ed - Dreadnought - Weapons_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -1510,7 +1582,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: fe14e000d70cb814390fb2d0945e53d1
-    - name: Kla'ed - Dreadnought - Weapons_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -1519,7 +1591,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 7c393e1fd7cc30b48991929fa9a219fb
-    - name: Kla'ed - Dreadnought - Weapons_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -1528,7 +1600,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 1c9df17558ca61e4aacf0f4e6a96ef98
-    - name: Kla'ed - Dreadnought - Weapons_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -1537,7 +1609,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: b2184d518c3ed954da4a61fe199042db
-    - name: Kla'ed - Dreadnought - Weapons_Frame_23
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -1546,7 +1618,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: e6faea550ca0bdb4f8fca93425871e94
-    - name: Kla'ed - Dreadnought - Weapons_Frame_24
+    - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -1555,7 +1627,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: bec037799c68b904688b53ad60fa2cf5
-    - name: Kla'ed - Dreadnought - Weapons_Frame_25
+    - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -1564,7 +1636,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 65d6270625e1b54459ef80475863d935
-    - name: Kla'ed - Dreadnought - Weapons_Frame_26
+    - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -1573,7 +1645,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 2322c00ebd6ffa04ebd88200e465cfbb
-    - name: Kla'ed - Dreadnought - Weapons_Frame_27
+    - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
@@ -1582,7 +1654,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 2152b43c410591c46beb3b689eb49246
-    - name: Kla'ed - Dreadnought - Weapons_Frame_28
+    - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -1591,7 +1663,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: d33594516e0fa3846ab395a05b945412
-    - name: Kla'ed - Dreadnought - Weapons_Frame_29
+    - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -1600,7 +1672,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 1eb8b2d9d599cf3489e0dad97618b633
-    - name: Kla'ed - Dreadnought - Weapons_Frame_30
+    - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
@@ -1609,7 +1681,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: b13a9d93ad4bf054f8f010a08d3aa73a
-    - name: Kla'ed - Dreadnought - Weapons_Frame_31
+    - name: Frame_31
       frameIndex: 31
       additiveSortOrder: 0
       cellRect:
@@ -1618,7 +1690,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: a9d5ba9266a57ea428dbd531caeb4a09
-    - name: Kla'ed - Dreadnought - Weapons_Frame_32
+    - name: Frame_32
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
@@ -1627,7 +1699,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 674b97e3811fc3e45883738fbbae8a38
-    - name: Kla'ed - Dreadnought - Weapons_Frame_33
+    - name: Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
@@ -1636,7 +1708,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 4f97569b02816c347a99ef7a4075c14e
-    - name: Kla'ed - Dreadnought - Weapons_Frame_34
+    - name: Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
@@ -1645,7 +1717,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 3d91339a3d0afb347bc94f20924f8024
-    - name: Kla'ed - Dreadnought - Weapons_Frame_35
+    - name: Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
@@ -1654,7 +1726,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: ec60b50a42af3184283dc2207a15f857
-    - name: Kla'ed - Dreadnought - Weapons_Frame_36
+    - name: Frame_36
       frameIndex: 36
       additiveSortOrder: 0
       cellRect:
@@ -1663,7 +1735,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 50b4e98048a8d6343a7a56fa8643e460
-    - name: Kla'ed - Dreadnought - Weapons_Frame_37
+    - name: Frame_37
       frameIndex: 37
       additiveSortOrder: 0
       cellRect:
@@ -1672,7 +1744,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 7aa9ba8f354b2df4287fa96da6170e25
-    - name: Kla'ed - Dreadnought - Weapons_Frame_38
+    - name: Frame_38
       frameIndex: 38
       additiveSortOrder: 0
       cellRect:
@@ -1681,7 +1753,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 1078bf0bd1957604e9e0c4d87ae5d15c
-    - name: Kla'ed - Dreadnought - Weapons_Frame_39
+    - name: Frame_39
       frameIndex: 39
       additiveSortOrder: 0
       cellRect:
@@ -1690,7 +1762,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: c9dcc73b1c452e3489ca6c2518c64a2c
-    - name: Kla'ed - Dreadnought - Weapons_Frame_40
+    - name: Frame_40
       frameIndex: 40
       additiveSortOrder: 0
       cellRect:
@@ -1699,7 +1771,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: ca3f063940c919d439ac772d24f8adc8
-    - name: Kla'ed - Dreadnought - Weapons_Frame_41
+    - name: Frame_41
       frameIndex: 41
       additiveSortOrder: 0
       cellRect:
@@ -1708,7 +1780,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 9f7b6267e0c308241a9d32c6e87d0942
-    - name: Kla'ed - Dreadnought - Weapons_Frame_42
+    - name: Frame_42
       frameIndex: 42
       additiveSortOrder: 0
       cellRect:
@@ -1717,7 +1789,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: f0dff9003f46d2a40952a6fea2c14aad
-    - name: Kla'ed - Dreadnought - Weapons_Frame_43
+    - name: Frame_43
       frameIndex: 43
       additiveSortOrder: 0
       cellRect:
@@ -1726,7 +1798,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 15fad3b4d53e5444680cff94abed0238
-    - name: Kla'ed - Dreadnought - Weapons_Frame_44
+    - name: Frame_44
       frameIndex: 44
       additiveSortOrder: 0
       cellRect:
@@ -1735,7 +1807,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 494000fdb32fed241808499549036316
-    - name: Kla'ed - Dreadnought - Weapons_Frame_45
+    - name: Frame_45
       frameIndex: 45
       additiveSortOrder: 0
       cellRect:
@@ -1744,7 +1816,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 11dcbe6de1054b64f87e0799de130ba7
-    - name: Kla'ed - Dreadnought - Weapons_Frame_46
+    - name: Frame_46
       frameIndex: 46
       additiveSortOrder: 0
       cellRect:
@@ -1753,7 +1825,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 57e1e31f841156c46b5e31867a3de4de
-    - name: Kla'ed - Dreadnought - Weapons_Frame_47
+    - name: Frame_47
       frameIndex: 47
       additiveSortOrder: 0
       cellRect:
@@ -1762,7 +1834,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 7073a4e200f56234c912ca44526bc01a
-    - name: Kla'ed - Dreadnought - Weapons_Frame_48
+    - name: Frame_48
       frameIndex: 48
       additiveSortOrder: 0
       cellRect:
@@ -1771,7 +1843,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 9d6a42c8b184e1a4c9a37d41c76a17be
-    - name: Kla'ed - Dreadnought - Weapons_Frame_49
+    - name: Frame_49
       frameIndex: 49
       additiveSortOrder: 0
       cellRect:
@@ -1780,7 +1852,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 21385c23221d34948b951a9922c11f01
-    - name: Kla'ed - Dreadnought - Weapons_Frame_50
+    - name: Frame_50
       frameIndex: 50
       additiveSortOrder: 0
       cellRect:
@@ -1789,7 +1861,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 977f40e59723a5a4d89218ff789dc834
-    - name: Kla'ed - Dreadnought - Weapons_Frame_51
+    - name: Frame_51
       frameIndex: 51
       additiveSortOrder: 0
       cellRect:
@@ -1798,7 +1870,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 10f30d64b9be24347813dd0cd78720f0
-    - name: Kla'ed - Dreadnought - Weapons_Frame_52
+    - name: Frame_52
       frameIndex: 52
       additiveSortOrder: 0
       cellRect:
@@ -1807,7 +1879,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: eecf7843e7017314ca6c697d1992b58b
-    - name: Kla'ed - Dreadnought - Weapons_Frame_53
+    - name: Frame_53
       frameIndex: 53
       additiveSortOrder: 0
       cellRect:
@@ -1816,7 +1888,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 87b0cfa7665752944bc5b1ff3c16b0b2
-    - name: Kla'ed - Dreadnought - Weapons_Frame_54
+    - name: Frame_54
       frameIndex: 54
       additiveSortOrder: 0
       cellRect:
@@ -1825,7 +1897,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 15eff14273dec9849a851bbf2952b49b
-    - name: Kla'ed - Dreadnought - Weapons_Frame_55
+    - name: Frame_55
       frameIndex: 55
       additiveSortOrder: 0
       cellRect:
@@ -1834,7 +1906,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: bc7541b202404a946aa4baa317c41cf7
-    - name: Kla'ed - Dreadnought - Weapons_Frame_56
+    - name: Frame_56
       frameIndex: 56
       additiveSortOrder: 0
       cellRect:
@@ -1843,7 +1915,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: bca86410447df334b8dce91e44a4d20d
-    - name: Kla'ed - Dreadnought - Weapons_Frame_57
+    - name: Frame_57
       frameIndex: 57
       additiveSortOrder: 0
       cellRect:
@@ -1852,7 +1924,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 608a3efbf88fe36418ee5e29c2de486f
-    - name: Kla'ed - Dreadnought - Weapons_Frame_58
+    - name: Frame_58
       frameIndex: 58
       additiveSortOrder: 0
       cellRect:
@@ -1861,7 +1933,7 @@ ScriptedImporter:
         width: 72
         height: 100
       spriteId: 74d1d2ea7db9e804d8cabcaf16380aa9
-    - name: Kla'ed - Dreadnought - Weapons_Frame_59
+    - name: Frame_59
       frameIndex: 59
       additiveSortOrder: 0
       cellRect:
@@ -1871,9 +1943,13 @@ ScriptedImporter:
         height: 100
       spriteId: 74f168de0a5c4964b8d2d5983e835336
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 128, y: 128}
+  previousTextureSize: {x: 1024, y: 1024}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3068182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3068182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3068182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3068182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3068182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.3068182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.2777778}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: -0.22340424}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.53061223, y: -0.20224719}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.4827586, y: -0.16842106}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.4848485, y: -0.121212125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.4848485, y: -0.114583336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 84
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.4848485, y: -0.14772728}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.54545456, y: -0.21538462}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 164
@@ -402,15 +422,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 164, y: 300}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1382922917
+    uuid:
+      value0: 3963075449
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -331891847
     name: Kla'ed - Battlecruiser - Destruction
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -419,7 +445,7 @@ ScriptedImporter:
         width: 72
         height: 88
       spriteId: 192ca8c0ea22bd04b93866f949dd3300
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -428,7 +454,7 @@ ScriptedImporter:
         width: 72
         height: 88
       spriteId: ae8ee19a5fed23c4fbb94715b7daa944
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -437,7 +463,7 @@ ScriptedImporter:
         width: 72
         height: 88
       spriteId: f2394111ca837a94db04eadc4169bca3
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -446,7 +472,7 @@ ScriptedImporter:
         width: 72
         height: 88
       spriteId: 9e27396d259ea5b4892f94687f7f85b7
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -455,7 +481,7 @@ ScriptedImporter:
         width: 72
         height: 88
       spriteId: b5fccb2097927164baf5913b3a767ad1
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -464,7 +490,7 @@ ScriptedImporter:
         width: 72
         height: 88
       spriteId: 0c3a051120389044f8a2ec2b6348af8c
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -473,7 +499,7 @@ ScriptedImporter:
         width: 72
         height: 90
       spriteId: 9375cd8bebecceb4aaffa89d46e9850e
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -482,7 +508,7 @@ ScriptedImporter:
         width: 72
         height: 94
       spriteId: 64698ee6616216542872715ce66f137a
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -491,7 +517,7 @@ ScriptedImporter:
         width: 49
         height: 89
       spriteId: 9af72a52b3ef24347b6ca5e089f3b463
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -500,7 +526,7 @@ ScriptedImporter:
         width: 58
         height: 95
       spriteId: 29dc49bad5d398f4b8bb12c33dad1fba
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -509,7 +535,7 @@ ScriptedImporter:
         width: 66
         height: 99
       spriteId: 642f3fb6410298448acd0559d5460e73
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -518,7 +544,7 @@ ScriptedImporter:
         width: 66
         height: 96
       spriteId: 2c81cf3809587dc4aa1e65d9467ed1a8
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -527,7 +553,7 @@ ScriptedImporter:
         width: 66
         height: 88
       spriteId: 6fa52b3844c170042bfb5522e9d85518
-    - name: Kla'ed - Battlecruiser - Destruction_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -537,9 +563,13 @@ ScriptedImporter:
         height: 65
       spriteId: dfb79546f537d434ab9e8b7fee7b4b8c
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 128, y: 128}
+  previousTextureSize: {x: 256, y: 512}

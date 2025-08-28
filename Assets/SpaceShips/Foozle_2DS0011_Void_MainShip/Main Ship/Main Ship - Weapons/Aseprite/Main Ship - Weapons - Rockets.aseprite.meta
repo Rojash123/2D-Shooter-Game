@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.55}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 173
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.55}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 215
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.52380955}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 131
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.47826087}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 214
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.45833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.47826087}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.45833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 46
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.47826087}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 46
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.45833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 88
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.41666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 130
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.50000006, y: -0.45833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 172
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.51428574, y: -0.45454547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 88
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.5405405, y: -1.8181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.53846157, y: -5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 49
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: -0.8181819, y: -5.2000003}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 96
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: -0.6153847, y: -8.333333}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 115
@@ -442,15 +464,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 115, y: 67}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -903457953
+    uuid:
+      value0: 3102650267
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1192317029
     name: Main Ship - Weapons - Rockets
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Main Ship - Weapons - Rockets_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -459,7 +487,7 @@ ScriptedImporter:
         width: 34
         height: 20
       spriteId: ff0fed1c0a66d6d4da93c39a8cd075be
-    - name: Main Ship - Weapons - Rockets_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -468,7 +496,7 @@ ScriptedImporter:
         width: 34
         height: 20
       spriteId: 559486ff1edfc5848a7440cd39673268
-    - name: Main Ship - Weapons - Rockets_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -477,7 +505,7 @@ ScriptedImporter:
         width: 34
         height: 21
       spriteId: bb68005cc48fb1647a7142b160b046db
-    - name: Main Ship - Weapons - Rockets_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -486,7 +514,7 @@ ScriptedImporter:
         width: 34
         height: 23
       spriteId: d4ff827c68f518441b0f78c7636880f9
-    - name: Main Ship - Weapons - Rockets_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -495,7 +523,7 @@ ScriptedImporter:
         width: 34
         height: 24
       spriteId: d633f6310a7caeb4d9d739969ad07f5e
-    - name: Main Ship - Weapons - Rockets_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -504,7 +532,7 @@ ScriptedImporter:
         width: 34
         height: 23
       spriteId: 713281a1811b6f94fb40a226594d9bed
-    - name: Main Ship - Weapons - Rockets_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -513,7 +541,7 @@ ScriptedImporter:
         width: 34
         height: 24
       spriteId: 6343e0ea523882f4e8ffa0c3f7247634
-    - name: Main Ship - Weapons - Rockets_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -522,7 +550,7 @@ ScriptedImporter:
         width: 34
         height: 23
       spriteId: 5ff3723e3e9908147b611885c596bf68
-    - name: Main Ship - Weapons - Rockets_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -531,7 +559,7 @@ ScriptedImporter:
         width: 34
         height: 24
       spriteId: 4b7d75f1fc5e12a4fb62e66c4a7279d9
-    - name: Main Ship - Weapons - Rockets_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -540,7 +568,7 @@ ScriptedImporter:
         width: 34
         height: 24
       spriteId: 03fc0e2699d5b7a46b58da09ea50a3bf
-    - name: Main Ship - Weapons - Rockets_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -549,7 +577,7 @@ ScriptedImporter:
         width: 34
         height: 24
       spriteId: dd95338cf36c8474a8d9f7f838960ffa
-    - name: Main Ship - Weapons - Rockets_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -558,7 +586,7 @@ ScriptedImporter:
         width: 35
         height: 22
       spriteId: 4b98d045be16e6746a14e5e2e6915910
-    - name: Main Ship - Weapons - Rockets_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -567,7 +595,7 @@ ScriptedImporter:
         width: 37
         height: 11
       spriteId: 0f54868f056f6ee41906957afae1a429
-    - name: Main Ship - Weapons - Rockets_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -576,7 +604,7 @@ ScriptedImporter:
         width: 39
         height: 5
       spriteId: 9fb05e35f34141b47ba065a404415c5e
-    - name: Main Ship - Weapons - Rockets_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -585,7 +613,7 @@ ScriptedImporter:
         width: 11
         height: 5
       spriteId: 53d6bb6ec04d2a348a5b67a792277d54
-    - name: Main Ship - Weapons - Rockets_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -595,9 +623,13 @@ ScriptedImporter:
         height: 3
       spriteId: 38fee936d93752341b2c369fdfb03f7c
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 128}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -83,6 +84,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -96,6 +99,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -105,6 +110,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,6 +132,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -146,6 +153,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -166,6 +174,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -186,6 +195,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -206,6 +216,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -226,6 +237,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +258,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -266,6 +279,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -286,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -306,6 +321,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -326,6 +342,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -346,6 +363,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -366,6 +384,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -386,6 +405,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 76
@@ -406,6 +426,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -426,6 +447,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -446,6 +468,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -466,6 +489,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -486,6 +510,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -506,6 +531,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -526,6 +552,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 148
@@ -546,6 +573,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -566,6 +594,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -586,6 +615,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -606,6 +636,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -626,6 +657,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -646,6 +678,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -666,6 +699,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 220
@@ -686,6 +720,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -706,6 +741,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -726,6 +762,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -746,6 +783,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -766,6 +804,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -786,6 +825,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -806,6 +846,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 292
@@ -826,6 +867,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 364
@@ -846,6 +888,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 364
@@ -866,6 +909,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 364
@@ -886,6 +930,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 364
@@ -906,6 +951,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 364
@@ -922,15 +968,21 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 364, y: 292}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2096953327
+    uuid:
+      value0: 1725687189
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1725687189
     name: Kla'ed - Frigate - Shield
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Kla'ed - Frigate - Shield_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -939,7 +991,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 57160c75bdf08c44e99a17204c00c923
-    - name: Kla'ed - Frigate - Shield_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -948,7 +1000,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 1f064f019d9db9d49add5f715d88f2c7
-    - name: Kla'ed - Frigate - Shield_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -957,7 +1009,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 122d5699d6bc48b42a3121cabd0c5457
-    - name: Kla'ed - Frigate - Shield_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -966,7 +1018,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 9706c28e88325c649bfa78d57330f6f8
-    - name: Kla'ed - Frigate - Shield_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -975,7 +1027,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: e57b7616f1d73b640b4ad6294f263c5b
-    - name: Kla'ed - Frigate - Shield_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -984,7 +1036,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 659d7ecbcec6d9f4bb8edddcb49e8a02
-    - name: Kla'ed - Frigate - Shield_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -993,7 +1045,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 7206e26028d65ff45b24a652cbf1f980
-    - name: Kla'ed - Frigate - Shield_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -1002,7 +1054,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: ba91c06954b989d408a014c1ca0bd29e
-    - name: Kla'ed - Frigate - Shield_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -1011,7 +1063,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 0891219f91225d94586d97f6fbf8f15b
-    - name: Kla'ed - Frigate - Shield_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -1020,7 +1072,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: f476ff1de96432c4dad5e0e71c0f39cf
-    - name: Kla'ed - Frigate - Shield_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -1029,7 +1081,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: c3091712fcfa5414f876bff76e9bdf63
-    - name: Kla'ed - Frigate - Shield_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -1038,7 +1090,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 6f6421a3e59a7ee48a6dd3deccde62bf
-    - name: Kla'ed - Frigate - Shield_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -1047,7 +1099,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 11382b9eb0b4f0a4e882f8d69bcb06ba
-    - name: Kla'ed - Frigate - Shield_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -1056,7 +1108,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 50583dbc03eca5240aff1b0332c2bcc9
-    - name: Kla'ed - Frigate - Shield_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -1065,7 +1117,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 3356f7dfb3a4f384c9d940dc0ea6818d
-    - name: Kla'ed - Frigate - Shield_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -1074,7 +1126,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: d608c62c4b7acf4488ef39373f98017e
-    - name: Kla'ed - Frigate - Shield_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -1083,7 +1135,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 5dfdfd17a3459234cb5d99cf2a67f0a4
-    - name: Kla'ed - Frigate - Shield_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -1092,7 +1144,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 1be8e9ed9b18335439b3ad819aed888a
-    - name: Kla'ed - Frigate - Shield_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -1101,7 +1153,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 1ff4209d75e8ce04cb87cddef49738ba
-    - name: Kla'ed - Frigate - Shield_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -1110,7 +1162,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 17230a8b757b2334bbaf0c6f8f5e924b
-    - name: Kla'ed - Frigate - Shield_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -1119,7 +1171,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: eaedaafb312ea37478c831a453ba2832
-    - name: Kla'ed - Frigate - Shield_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -1128,7 +1180,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: e9a5013bc4875794384b4e05b8169670
-    - name: Kla'ed - Frigate - Shield_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -1137,7 +1189,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: a1655012e7fbae74eabbe796333f2dec
-    - name: Kla'ed - Frigate - Shield_Frame_23
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -1146,7 +1198,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 0485e6976999432479506884fa775fe9
-    - name: Kla'ed - Frigate - Shield_Frame_24
+    - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -1155,7 +1207,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: ebf33e2d84efb2a4bb40fa13a366b20b
-    - name: Kla'ed - Frigate - Shield_Frame_25
+    - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -1164,7 +1216,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: c9234ef7a0b025e40ba8539cfe187a3f
-    - name: Kla'ed - Frigate - Shield_Frame_26
+    - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -1173,7 +1225,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 55f7a64fcdf36a145bce41307a7dcc9f
-    - name: Kla'ed - Frigate - Shield_Frame_27
+    - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
@@ -1182,7 +1234,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 2acf8a0a66595c24c87723c6fa2f9fe5
-    - name: Kla'ed - Frigate - Shield_Frame_28
+    - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -1191,7 +1243,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 7213a8c1a9819544b8b52b67823475c3
-    - name: Kla'ed - Frigate - Shield_Frame_29
+    - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -1200,7 +1252,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 543b3c5d20edfc541a55dc8c44780af6
-    - name: Kla'ed - Frigate - Shield_Frame_30
+    - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
@@ -1209,7 +1261,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: ac711dc408cee5348b37e2571e95c27a
-    - name: Kla'ed - Frigate - Shield_Frame_31
+    - name: Frame_31
       frameIndex: 31
       additiveSortOrder: 0
       cellRect:
@@ -1218,7 +1270,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: b669ee5d37da3a8448417c4119f555c5
-    - name: Kla'ed - Frigate - Shield_Frame_32
+    - name: Frame_32
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
@@ -1227,7 +1279,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 79e681c820edbba4a84a71d8b35fc901
-    - name: Kla'ed - Frigate - Shield_Frame_33
+    - name: Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
@@ -1236,7 +1288,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 2c103c76baf2d2040880dbe22b654c38
-    - name: Kla'ed - Frigate - Shield_Frame_34
+    - name: Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
@@ -1245,7 +1297,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 28c4b477b2abb0a4e9854ae3111439ac
-    - name: Kla'ed - Frigate - Shield_Frame_35
+    - name: Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
@@ -1254,7 +1306,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 2e5447f68872de241a8b491ae078f938
-    - name: Kla'ed - Frigate - Shield_Frame_36
+    - name: Frame_36
       frameIndex: 36
       additiveSortOrder: 0
       cellRect:
@@ -1263,7 +1315,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: a0c0e353e8e9f044783ab56d71528d3c
-    - name: Kla'ed - Frigate - Shield_Frame_37
+    - name: Frame_37
       frameIndex: 37
       additiveSortOrder: 0
       cellRect:
@@ -1272,7 +1324,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 0c6f182b6df2f694dbef824907a04cb7
-    - name: Kla'ed - Frigate - Shield_Frame_38
+    - name: Frame_38
       frameIndex: 38
       additiveSortOrder: 0
       cellRect:
@@ -1281,7 +1333,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 3c181e7aa62bd7140855bcdf346c9f24
-    - name: Kla'ed - Frigate - Shield_Frame_39
+    - name: Frame_39
       frameIndex: 39
       additiveSortOrder: 0
       cellRect:
@@ -1291,9 +1343,13 @@ ScriptedImporter:
         height: 64
       spriteId: 17f006a52db94c449851d4c6625a354c
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 512, y: 512}
