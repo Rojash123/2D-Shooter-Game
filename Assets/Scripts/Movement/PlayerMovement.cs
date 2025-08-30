@@ -12,7 +12,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
     Vector3 offset, initialPoint, initialPlayerPosition;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-
     [SerializeField]
     GameObject[] spawnPosition;
 
@@ -27,13 +26,17 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public float bulletSpeed;
     [SerializeField] float fireRate, fireTime;
 
-    public Action<Comets,typeOfComet> OnCometDestroyed;
+    public Action<Comets,typeOfComet> OnCometDestroyed,OnCometDestroyedAfterHit;
 
     private List<Bullets> bulletPool = new List<Bullets>();
     [SerializeField] private int poolSize = 50;
     [SerializeField] public int bulletValue;
-
     [SerializeField] CometSpawnner spawnner;
+
+    public Action<bool> OnPlayerMove;
+    public Action OnCoinCollected;
+
+    public ParticleSystem centreExplosion, Sparks;
 
     private void Awake()
     {
@@ -53,7 +56,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
         MovementHandle();
         FireBullets();
     }
-
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -61,6 +63,8 @@ public class PlayerMovement : Singleton<PlayerMovement>
         fireTime = 0;
         controller.Movement.Touch.started += ctx => StartMovement(ctx);
         controller.Movement.Touch.canceled += ctx => EndMovement(ctx);
+        spawnner.StartSpawnning();
+        OnPlayerMove?.Invoke(true);
     }
 
     void StartMovement(InputAction.CallbackContext context)
@@ -112,7 +116,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
     {
         if (canFireBullets)
         {
-            spawnner.StartSpawnning();
             if (Time.time >= fireTime + 1 / fireRate)
             {
                 fireTime = Time.time;
@@ -144,12 +147,25 @@ public class PlayerMovement : Singleton<PlayerMovement>
         }
     }
 
-   
-
     public void GoBackToPoll(GameObject bullet)
     {
         bullet.SetActive(false);
         bulletPool.Add(bullet.GetComponent<Bullets>());
     }
+
+    public void PlayerKilled()
+    {
+        mainCamera.GetComponent<CameraShake>().Shake();
+        centreExplosion.transform.position=this.transform.position;
+        
+        centreExplosion.Play();
+        Sparks.Play();
+
+        this.gameObject.SetActive(false);
+        canFireBullets = false;
+        CanSwipe = false;
+    }
+
+    
 
 }
