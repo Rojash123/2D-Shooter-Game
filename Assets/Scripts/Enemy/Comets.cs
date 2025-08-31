@@ -21,6 +21,10 @@ public class Comets : MonoBehaviour, IDamageable
         ResetCometHealth();
         canMove = true;
     }
+    public void SetSpeed(float s)
+    {
+        speed = s;
+    }
 
     void ResetCometHealth()
     {

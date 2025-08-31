@@ -13,13 +13,16 @@ public class CometSpawnner : MonoBehaviour
     [SerializeField] Transform cometPoolParent;
     [SerializeField] float cometSpawnRate, cometSpawnTime;
 
+    List<Vector3> spawnPoints=new List<Vector3>();
+
     float lasttimeMediumCometSpawnTime=0;
     float lasttimeLargeCometSpawnTime=0;
 
     bool canSpawnComets;
     Camera cam;
 
-    float minX, maxX, minY;
+    float minY;
+    float cometSpeed=2f;
 
     private void Awake()
     {
@@ -58,15 +61,16 @@ public class CometSpawnner : MonoBehaviour
 
     void SetSpawnLimit()
     {
-        Vector3 leftBound = cam.ViewportToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
-        Vector3 rightBound = cam.ViewportToWorldPoint(new Vector3(1, 0, cam.nearClipPlane));
+        float initalPoint = 0.1f;
+        for (int i = 0; i < 4; i++)
+        {
+            spawnPoints.Add(cam.ViewportToWorldPoint(new Vector3(initalPoint, 0, cam.nearClipPlane)));
+            initalPoint += 0.28f;
+        }
         Vector3 spawnPoint = cam.ViewportToWorldPoint(new Vector3(0, 1, cam.nearClipPlane));
-
         minY = spawnPoint.y;
-        minX = leftBound.x;
-        maxX = rightBound.x;
+        
     }
-
     private void initialiZePool()
     {
         InitializeCometPool(smallCometPrefab, smallCometsPool);
@@ -92,64 +96,38 @@ public class CometSpawnner : MonoBehaviour
     {
         if (canSpawnComets)
         {
-            
+            cometSpeed += Time.deltaTime * 0.1f;
             if (Time.time > cometSpawnTime + 1 / cometSpawnRate)
             {
                 cometSpawnTime = Time.time;
-                int randomCometValue = Random.Range(0, 10);
                 Comets pickedComet;
+                pickedComet = PickComet(cometSpeed);
+                if (pickedComet == null) return;
 
-                if (randomCometValue < 6)
-                {
-                    if (smallCometsPool.Count == 0) return;
-                    pickedComet = smallCometsPool[0];
-                    smallCometsPool.RemoveAt(0);
-                }
-                else if (randomCometValue < 9)
-                {
-                    if (mediumCometsPool.Count == 0) return;
-                    if (Time.time - lasttimeMediumCometSpawnTime > 5f)
-                    {
-                        lasttimeMediumCometSpawnTime = Time.time;
-                        pickedComet = mediumCometsPool[0];
-                        mediumCometsPool.RemoveAt(0);
-                    }
-                    else
-                    {
-                        if (smallCometsPool.Count == 0) return;
-                        pickedComet = smallCometsPool[0];
-                        smallCometsPool.RemoveAt(0);
-                    }
-                }
-                else
-                {
-                    if (Time.time - lasttimeLargeCometSpawnTime > 8f)
-                    {
-                        if (largeCometsPool.Count == 0) return;
-                        lasttimeLargeCometSpawnTime = Time.time;
-                        pickedComet = largeCometsPool[0];
-                        largeCometsPool.RemoveAt(0);
-                    }
-                    else
-                    {
-                        if (Time.time - lasttimeMediumCometSpawnTime > 5f)
-                        {
-                            lasttimeMediumCometSpawnTime = Time.time;
-                            pickedComet = mediumCometsPool[0];
-                            mediumCometsPool.RemoveAt(0);
-                        }
-                        else
-                        {
-                            if (smallCometsPool.Count == 0) return;
-                            pickedComet = smallCometsPool[0];
-                            smallCometsPool.RemoveAt(0);
-                        }
-                    }
-                }
-                Vector2 spawnPoint = new Vector2(Random.Range(minX, maxX), minY + 10f);
+                Vector2 spawnPoint = new Vector2(spawnPoints[Random.Range(0,4)].x,minY+10);
                 pickedComet.transform.position = spawnPoint;
+                pickedComet.SetSpeed(Mathf.Clamp((cometSpeed/5),2,9f));
                 pickedComet.gameObject.SetActive(true);
             }
+        }
+    }
+
+    Comets PickComet(float cometSpeed)
+    {
+        Comets pickedComet;
+        if (cometSpeed < 4f)
+        {
+            if(smallCometsPool.Count<=0)return null;
+            pickedComet = smallCometsPool[0];
+            smallCometsPool.RemoveAt(0);
+            return pickedComet;
+        }
+        else
+        {
+            if (mediumCometsPool.Count <= 0) return null;
+            pickedComet = mediumCometsPool[0];
+            mediumCometsPool.RemoveAt(0);
+            return pickedComet;
         }
     }
 }

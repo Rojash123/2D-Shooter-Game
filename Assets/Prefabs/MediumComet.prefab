@@ -111,7 +111,7 @@ MonoBehaviour:
   speed: 3
   rotationValue: 20
   TotalCometHealth: 300
-  cometType: 0
+  cometType: 1
 --- !u!50 &1710471518570840469
 Rigidbody2D:
   serializedVersion: 5
