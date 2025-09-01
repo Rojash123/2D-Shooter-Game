@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour,IDamageable
     [SerializeField] float enemyHealth;
     [SerializeField] GameObject enemyPool;
 
-    public void Damage(float damageAmount)
+    public void TakeDamage(float damageAmount)
     {
         enemyHealth-= damageAmount;
         if(enemyHealth <= 0)

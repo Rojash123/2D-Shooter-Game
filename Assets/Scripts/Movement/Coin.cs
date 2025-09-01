@@ -19,9 +19,6 @@ public class Coin : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, PlayerMovement.Instance.transform.position, speed * Time.deltaTime);
         }
     }
-    void OnItemReached()
-    {
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         var hitObj = other.GetComponent<PlayerData>();

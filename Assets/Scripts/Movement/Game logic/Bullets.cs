@@ -19,7 +19,7 @@ public class Bullets:MonoBehaviour
         IDamageable target = other.GetComponent<IDamageable>();
         if (target != null)
         {
-            target.Damage(damageAmount);
+            target.TakeDamage(damageAmount);
             PlayerMovement.Instance.GoBackToPoll(this.gameObject);
             canMoveForward = false;
         }

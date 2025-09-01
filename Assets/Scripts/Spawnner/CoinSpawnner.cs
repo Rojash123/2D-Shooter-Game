@@ -35,13 +35,13 @@ public class CoinSpawnner : Singleton<CoinSpawnner>
                 break;
 
             case typeOfComet.large:
-                coinValue = 9;
+                coinValue = 15;
                 break;
 
             default:
                 break;
         }
-        float delay = 0.3f;
+        float delay = 0.1f;
         PlayerData.UpdateCoinValue(coinValue);
         for (int i = 0; i < coinValue; i++)
         {

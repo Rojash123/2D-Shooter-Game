@@ -422,6 +422,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750251268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &386252529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386252530}
+  m_Layer: 0
+  m_Name: SpawnPosition (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &386252530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386252529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.71, y: 1.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2129621678}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393281864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5476,7 +5507,7 @@ Transform:
   m_GameObject: {fileID: 495056458}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.33, y: 1.98, z: 0}
+  m_LocalPosition: {x: -0.86, y: 1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6085,7 +6116,7 @@ Transform:
   m_GameObject: {fileID: 844005675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 1.98, z: 0}
+  m_LocalPosition: {x: 0.86, y: 1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6123,6 +6154,37 @@ Transform:
   - {fileID: 1918576081}
   - {fileID: 1141484068}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &935713012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935713013}
+  m_Layer: 0
+  m_Name: SpawnPosition (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &935713013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935713012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.71, y: 1.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2129621678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1032126948
 GameObject:
@@ -11068,7 +11130,7 @@ MonoBehaviour:
   mediumCometPrefab: {fileID: 4687734499137523163, guid: b4865eaa4388a4c4d83c133af0913108, type: 3}
   largeCometPrefab: {fileID: 4687734499137523163, guid: 84fe0d5cf1ec5ca4b864e44ad03a37f6, type: 3}
   cometPoolParent: {fileID: 560998296}
-  cometSpawnRate: 2
+  cometSpawnRate: 0.8
   cometSpawnTime: 0
 --- !u!1 &1276232184
 GameObject:
@@ -11882,16 +11944,18 @@ MonoBehaviour:
   - {fileID: 526027473}
   - {fileID: 495056458}
   - {fileID: 844005675}
+  - {fileID: 935713012}
+  - {fileID: 386252529}
   bulletPrefab: {fileID: 3725154104478199154, guid: 64583e1f776be204395b735158e8fa24, type: 3}
   bulletPoolParent: {fileID: 1476173233}
   cometPoolParent: {fileID: 0}
   canFireBullets: 1
   movementSpeed: 50
   bulletSpeed: 10
-  fireRate: 2
+  fireRate: 5
   fireTime: 0
-  poolSize: 50
-  bulletValue: 0
+  poolSize: 100
+  bulletValue: 4
   spawnner: {fileID: 1141484069}
   centreExplosion: {fileID: 1032126950}
   Sparks: {fileID: 444832431}
@@ -12202,7 +12266,7 @@ MonoBehaviour:
   coins: {fileID: 6821842537039728893, guid: 06ac3e1c95ad32f419e1f9b6a09bab4b, type: 3}
   coinPoolParent: {fileID: 1912260292}
   coinFinalPosition: {fileID: 1540943400}
-  poolCount: 50
+  poolCount: 70
 --- !u!4 &1918576081
 Transform:
   m_ObjectHideFlags: 0
@@ -12560,6 +12624,8 @@ Transform:
   - {fileID: 526027474}
   - {fileID: 495056459}
   - {fileID: 844005676}
+  - {fileID: 935713013}
+  - {fileID: 386252530}
   - {fileID: 7878350319177334794}
   - {fileID: 7878350319419249114}
   - {fileID: 7878350318766061894}
@@ -12680,7 +12746,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.47}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12690,7 +12756,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.37, y: 4.07}
+  m_Size: {x: 2.73, y: 2.35}
   m_EdgeRadius: 0
 --- !u!114 &2129621683
 MonoBehaviour:

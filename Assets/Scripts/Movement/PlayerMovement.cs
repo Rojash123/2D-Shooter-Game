@@ -17,7 +17,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform bulletPoolParent, cometPoolParent;
-   
+
     bool CanSwipe, initalPointSet;
     [SerializeField] bool canFireBullets;
 
@@ -26,7 +26,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public float bulletSpeed;
     [SerializeField] float fireRate, fireTime;
 
-    public Action<Comets,typeOfComet> OnCometDestroyed,OnCometDestroyedAfterHit;
+    public Action<Comets, typeOfComet> OnCometDestroyed, OnCometDestroyedAfterHit;
 
     private List<Bullets> bulletPool = new List<Bullets>();
     [SerializeField] private int poolSize = 50;
@@ -119,13 +119,30 @@ public class PlayerMovement : Singleton<PlayerMovement>
             if (Time.time >= fireTime + 1 / fireRate)
             {
                 fireTime = Time.time;
-                for (int i = 0; i <= bulletValue; i++)
+                if (bulletValue != 1)
                 {
-                    var bullet = bulletPool[i].gameObject;
-                    bullet.transform.position = spawnPosition[i].transform.position;
-                    bullet.gameObject.SetActive(true);
-                    bulletPool.RemoveAt(i);
-                    bullet.GetComponent<Bullets>().canMoveForward = true;
+                    for (int i = 0; i <= bulletValue; i++)
+                    {
+                        var bullet = bulletPool[i].gameObject;
+                        bullet.transform.position = spawnPosition[i].transform.position;
+                        bullet.gameObject.SetActive(true);
+                        bulletPool.RemoveAt(i);
+                        bullet.GetComponent<Bullets>().canMoveForward = true;
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i <= 2; i++)
+                    {
+                        if (i != 0)
+                        {
+                            var bullet = bulletPool[i].gameObject;
+                            bullet.transform.position = spawnPosition[i].transform.position;
+                            bullet.gameObject.SetActive(true);
+                            bulletPool.RemoveAt(i);
+                            bullet.GetComponent<Bullets>().canMoveForward = true;
+                        }
+                    }
                 }
             }
         }
@@ -156,8 +173,8 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public void PlayerKilled()
     {
         mainCamera.GetComponent<CameraShake>().Shake();
-        centreExplosion.transform.position=this.transform.position;
-        
+        centreExplosion.transform.position = this.transform.position;
+
         centreExplosion.Play();
         Sparks.Play();
 
@@ -166,6 +183,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
         CanSwipe = false;
     }
 
-    
+
 
 }

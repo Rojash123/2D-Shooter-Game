@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour,IDamageable
 {
-    public void Damage(float damageAmount)
+    public void TakeDamage(float damageAmount)
     {
         //Do nothing to the barrier
     }
-
     public void Destroy()
     {
         
