@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7384be068ba6842aed4466412c9d25, type: 3}
+  m_Name: PowerUpsSO
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpsSO
+  powerUpPrefab: {fileID: 1320966545891227637, guid: 7ef3f274c9aa1ef4e94c4294c9384e28, type: 3}
+  powerUpstypes:
+  - powerUpType: 0
+    duration: 15
+    isUnlocked: 0
+    powerupIcon: {fileID: 21300000, guid: ed56fd835b8e8475495a11274a38e15a, type: 3}
+    isActive: 0
+  - powerUpType: 1
+    duration: 15
+    isUnlocked: 0
+    powerupIcon: {fileID: 21300000, guid: 8806eb6850b984efba963584ec09a94e, type: 3}
+    isActive: 0
+  - powerUpType: 2
+    duration: 15
+    isUnlocked: 0
+    powerupIcon: {fileID: 21300000, guid: 4d5269ba2256c408bbbd8bae112661a4, type: 3}
+    isActive: 0

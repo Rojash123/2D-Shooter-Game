@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3391a95a2dd73b4d8e939227146159f, type: 3}
+  m_Name: EnemyAndCometSO
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAndCometSO
+  cometPrefab: {fileID: 8823765575556409272, guid: 77f079d7a122e2a47b7e74d7398a7d63, type: 3}
+  enemies:
+  - enemyName: Shooter1
+    enemy: {fileID: 258990900101223960, guid: 37c17926a64b49f44ae56ee6c08274f2, type: 3}
+    coinvalue: 5
+    maxHealth: 300
+    fireRate: 0.2
+  comets:
+  - cometName: Small Comet
+    maxHealth: 100
+    size: 2
+    coinvalue: 2
+    cometType: 0
+  - cometName: MediumComet
+    maxHealth: 330
+    size: 5
+    coinvalue: 5
+    cometType: 1
+  - cometName: LargesizeComet
+    maxHealth: 550
+    size: 8
+    coinvalue: 15
+    cometType: 2
+  spaceMaterialData:
+  - materilaName: Drum
+    obstacles: {fileID: -8524236282068256898, guid: c5a053edac677f943a4aa6eff4077675, type: 3}
+    coinvalue: 3
+    maxHealth: 200

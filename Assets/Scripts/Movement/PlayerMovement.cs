@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : Singleton<PlayerMovement>
 {
     public PlayerController controller;
+    PlayerData _playerData;
     Camera mainCamera;
     Vector3 offset, initialPoint, initialPlayerPosition;
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -16,7 +17,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
     GameObject[] spawnPosition;
 
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] Transform bulletPoolParent, cometPoolParent;
+    [SerializeField] Transform bulletPoolParent;
 
     bool CanSwipe, initalPointSet;
     [SerializeField] bool canFireBullets;
@@ -26,17 +27,26 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public float bulletSpeed;
     [SerializeField] float fireRate, fireTime;
 
-    public Action<Comets, typeOfComet> OnCometDestroyed, OnCometDestroyedAfterHit;
-
     private List<Bullets> bulletPool = new List<Bullets>();
     [SerializeField] private int poolSize = 50;
     [SerializeField] public int bulletValue;
-    [SerializeField] CometSpawnner spawnner;
+    [SerializeField] CometAndEnemySpawnner spawnner;
+
+    public ParticleSystem centreExplosion, Sparks;
+
+    #region Events
 
     public Action<bool> OnPlayerMove;
     public Action OnCoinCollected;
 
-    public ParticleSystem centreExplosion, Sparks;
+    public Action<Comets, typeOfComet, int> OnCometDestroyed, OnCometDestroyedAfterHit;
+    public Action<Enemy, int> OnEnemyDestroyed, OnEnemyDestroyedAfterHit;
+    public Action<SpaceMaterials, int> OnObstaclesDestroyed, OnObstaclesDestroyedAfterHit;
+
+    public Action<PowerUp> OnPowerUpDestroyed;
+    public Action<float, PowerUps, Sprite> OnPowerUpPicked;
+
+    #endregion
 
     private void Awake()
     {
@@ -46,10 +56,12 @@ public class PlayerMovement : Singleton<PlayerMovement>
     private void OnEnable()
     {
         controller.Enable();
+        OnPowerUpPicked += HandlePowerUpPicked;
     }
     private void OnDisable()
     {
         controller.Disable();
+        OnPowerUpPicked += HandlePowerUpPicked;
     }
     void Update()
     {
@@ -58,6 +70,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
     }
     void Start()
     {
+        _playerData = GetComponentInChildren<PlayerData>();
         Application.targetFrameRate = 60;
         initialiZePool();
         fireTime = 0;
@@ -111,38 +124,39 @@ public class PlayerMovement : Singleton<PlayerMovement>
             transform.position = Vector2.Lerp(transform.position, newPosition, movementSpeed * Time.deltaTime);
         }
     }
-    // Update is called once per frame
     void FireBullets()
     {
         if (canFireBullets)
         {
-            if (Time.time >= fireTime + 1 / fireRate)
+            if (Time.time >= fireTime + 1 / (fireRate + _playerData.increasedFireRate))
             {
                 fireTime = Time.time;
-                if (bulletValue != 1)
+                if (bulletValue == 1)
                 {
-                    for (int i = 0; i <= bulletValue; i++)
+                    if (_playerData.increasedFireRate <= 0)
                     {
-                        var bullet = bulletPool[i].gameObject;
-                        bullet.transform.position = spawnPosition[i].transform.position;
-                        bullet.gameObject.SetActive(true);
-                        bulletPool.RemoveAt(i);
-                        bullet.GetComponent<Bullets>().canMoveForward = true;
+                        for (int i = 0; i <= 2; i++)
+                        {
+                            if (i != 0)
+                            {
+                                var bullet = bulletPool[i].gameObject;
+                                bullet.transform.position = spawnPosition[i].transform.position;
+                                bullet.gameObject.SetActive(true);
+                                bulletPool.RemoveAt(i);
+                                bullet.GetComponent<Bullets>().canMoveForward = true;
+                            }
+                        }
+                        return;
                     }
                 }
-                else
+
+                for (int i = 0; i <= bulletValue + _playerData.increasedMultiRate; i++)
                 {
-                    for (int i = 0; i <= 2; i++)
-                    {
-                        if (i != 0)
-                        {
-                            var bullet = bulletPool[i].gameObject;
-                            bullet.transform.position = spawnPosition[i].transform.position;
-                            bullet.gameObject.SetActive(true);
-                            bulletPool.RemoveAt(i);
-                            bullet.GetComponent<Bullets>().canMoveForward = true;
-                        }
-                    }
+                    var bullet = bulletPool[i].gameObject;
+                    bullet.transform.position = spawnPosition[i].transform.position;
+                    bullet.gameObject.SetActive(true);
+                    bulletPool.RemoveAt(i);
+                    bullet.GetComponent<Bullets>().canMoveForward = true;
                 }
             }
         }
@@ -183,6 +197,23 @@ public class PlayerMovement : Singleton<PlayerMovement>
         CanSwipe = false;
     }
 
+    public void HandlePowerUpPicked(float duration, PowerUps type, Sprite powerUpIcon)
+    {
+        switch (type)
+        {
+            case PowerUps.increasedFireRate:
+                float increasedfireRate = fireRate * 2;
+                Mathf.Clamp(increasedfireRate, 2, 10);
+                _playerData.HandleFireRatePowerUps(duration, powerUpIcon, increasedfireRate - fireRate);
+                break;
 
+            case PowerUps.invincibility:
+                _playerData.HandleInvincibiltyPowerUps(duration, powerUpIcon);
+                break;
 
+            case PowerUps.enhancedAttack:
+                _playerData.HandleMultiShotPowerUps(duration, powerUpIcon, 2);
+                break;
+        }
+    }
 }

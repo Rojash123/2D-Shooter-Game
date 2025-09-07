@@ -19,30 +19,21 @@ public class CoinSpawnner : Singleton<CoinSpawnner>
             coin.SetActive(false);
         }
         PlayerMovement.Instance.OnCometDestroyedAfterHit += SendBacktoPool;
+        PlayerMovement.Instance.OnEnemyDestroyedAfterHit += SpawnCoinEnemy;
+        PlayerMovement.Instance.OnObstaclesDestroyedAfterHit += SpawnCoinObstacled;
     }
-
-    public void SendBacktoPool(Comets comet, typeOfComet type)
+    private void OnDestroy()
     {
-        int coinValue = 0;
-        switch (type)
-        {
-            case typeOfComet.small:
-                coinValue = 2;
-                break;
-
-            case typeOfComet.medium:
-                coinValue = 5;
-                break;
-
-            case typeOfComet.large:
-                coinValue = 15;
-                break;
-
-            default:
-                break;
-        }
+        if (PlayerMovement.Instance == null) return;
+        PlayerMovement.Instance.OnCometDestroyedAfterHit -= SendBacktoPool;
+        PlayerMovement.Instance.OnEnemyDestroyedAfterHit -= SpawnCoinEnemy;
+        PlayerMovement.Instance.OnObstaclesDestroyedAfterHit -= SpawnCoinObstacled;
+    }
+    public void SendBacktoPool(Comets comet, typeOfComet type,int coinValue)
+    {
         float delay = 0.1f;
         PlayerData.UpdateCoinValue(coinValue);
+        coinValue=Mathf.Clamp(coinValue, 2, 6);
         for (int i = 0; i < coinValue; i++)
         {
             var data= coinsObjectList[0];
@@ -52,9 +43,38 @@ public class CoinSpawnner : Singleton<CoinSpawnner>
             delay += 0.1f;
             coinsObjectList.RemoveAt(0);
         }
-
     }
+    public void SpawnCoinEnemy(Enemy obj, int coinValue)
+    {
+        float delay = 0.1f;
+        PlayerData.UpdateCoinValue(coinValue);
+        coinValue = Mathf.Clamp(coinValue, 2, 4);
 
+        for (int i = 0; i < coinValue; i++)
+        {
+            var data = coinsObjectList[0];
+            data.transform.position = obj.transform.position + new Vector3(UnityEngine.Random.Range(-0.3f, 0.1f), UnityEngine.Random.Range(-0.3f, 0.1f), 0);
+            data.gameObject.SetActive(true);
+            data.AllowMove(delay);
+            delay += 0.1f;
+            coinsObjectList.RemoveAt(0);
+        }
+    }
+    public void SpawnCoinObstacled(SpaceMaterials obj, int coinValue)
+    {
+        float delay = 0.1f;
+        PlayerData.UpdateCoinValue(coinValue);
+        coinValue = Mathf.Clamp(coinValue, 2, 4);
+        for (int i = 0; i < coinValue; i++)
+        {
+            var data = coinsObjectList[0];
+            data.transform.position = obj.transform.position + new Vector3(UnityEngine.Random.Range(-0.3f, 0.1f), UnityEngine.Random.Range(-0.3f, 0.1f), 0);
+            data.gameObject.SetActive(true);
+            data.AllowMove(delay);
+            delay += 0.1f;
+            coinsObjectList.RemoveAt(0);
+        }
+    }
     public void SendBacktoPool(Coin obj)
     {
         obj.gameObject.SetActive(false);

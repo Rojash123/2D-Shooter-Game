@@ -6,10 +6,13 @@ public class Obstacles : MonoBehaviour,IDamageable
 {
     public void TakeDamage(float damageAmount)
     {
-        //Do nothing to the barrier
+       
     }
     public void Destroy()
     {
-        
+      
+    }
+    public void SetSpeed(float Speed)
+    {
     }
 }
