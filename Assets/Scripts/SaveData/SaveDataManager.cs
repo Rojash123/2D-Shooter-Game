@@ -89,7 +89,7 @@ public class SaveDataManager : Singleton<SaveDataManager>
         listData.Add(powerup1);
         listData.Add(powerup2);
         listData.Add(powerup3);
-        currentData = new SaveData(0, 100, listData, false, 0,0,"guest");
+        currentData = new SaveData(0, 1000, listData, false, 0,0,"guest");
         SaveData();
     }
 }
