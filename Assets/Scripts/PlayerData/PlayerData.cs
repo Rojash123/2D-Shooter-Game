@@ -3,28 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using UnityEngine.WSA;
 public class PlayerData : MonoBehaviour
 {
-    public int playerLives;
-    [SerializeField] TextMeshProUGUI scoreText, coinText;
-    bool canCountScore;
-
-    private float score;
-    private int coin;
-    private static int totalCoin;
-
-    float fireRateDuration, invincibilityDuration, multiShotDuration;
-
-    public float increasedMultiRate = 0, increasedFireRate = 0;
-    public bool isIncinvibile = false;
-
+    [SerializeField] TextMeshProUGUI scoreText, coinText, scoreTextGameOver, coinTextGameOver,coinTextDouble;
+    [SerializeField] Button doubleCoinButton;
     [SerializeField] Material shipMaterial;
-    public GameObject invincibilty;
-
     [SerializeField] GameEventsSO gameEventSO;
+    [SerializeField] UIEventsSO uiEventSO;
 
     [Serializable]
     public class powerUpIconHolderUI
@@ -36,6 +26,19 @@ public class PlayerData : MonoBehaviour
         public bool isActive;
     }
     public List<powerUpIconHolderUI> powerUpHolders;
+
+    public int playerLives;
+    public float increasedMultiRate = 0, increasedFireRate = 0;
+    public bool isIncinvibile = false;
+    public GameObject invincibilty;
+
+    bool canCountScore;
+    private float score;
+    private int coin;
+    int gameCount;
+    private static int totalCoin;
+    float fireRateDuration, invincibilityDuration, multiShotDuration;
+    private float gameStartTime;
 
     Coroutine coinIncrement;
     float Score
@@ -56,14 +59,17 @@ public class PlayerData : MonoBehaviour
             coinText.text = value.ToString();
         }
     }
-
     private void Awake()
     {
         gameEventSO.OnGameStart += HandleGameStart;
         gameEventSO.OnCoinCollected += IncreaseCoin;
         gameEventSO.OnGameOver += HandleGameOver;
-    }
 
+        doubleCoinButton.onClick.AddListener(() => 
+        {
+            uiEventSO.OnDoubleReward(coin);
+        });
+    }
     private void OnDestroy()
     {
         gameEventSO.OnGameStart -= HandleGameStart;
@@ -73,11 +79,43 @@ public class PlayerData : MonoBehaviour
     void HandleGameStart()
     {
         Score = 0;
+        Coin = 0;
         canCountScore = true;
+        gameStartTime = Time.time;
+        gameCount++;
     }
-    void HandleGameOver()
+    void HandleGameOver(bool isQuit)
     {
-        canCountScore = false;
+        SoundManager.Instance.PlayBackGroundMusicMenu();
+        DisableAllPowerUp();
+        if (isQuit)
+        {
+            canCountScore = false;
+            return;
+        }
+        SaveDataManager.Instance.HandleScoresAndCoin(coin, score, Time.time - gameStartTime);
+        scoreTextGameOver.text = score.ToString("f2");
+        coinTextGameOver.text = coin.ToString();
+        coinTextDouble.text = coin.ToString();
+        doubleCoinButton.interactable = true;
+        if (gameCount % 4 == 0 && gameCount>2)
+        {
+            AdsManager.Instance.ShowInterstitialAds();
+        }
+    }
+
+    void DisableAllPowerUp()
+    {
+        StopAllCoroutines();
+        foreach (var holder in powerUpHolders)
+        {
+            holder.type = PowerUps.None;
+            invincibilty.SetActive(false);
+            holder.powerUpHolder.SetActive(false);
+            isIncinvibile = false;
+            increasedMultiRate = 0;
+            increasedFireRate = 0;
+        }
     }
 
     private void OnDisable()
@@ -201,7 +239,6 @@ public class PlayerData : MonoBehaviour
         increasedMultiRate = 0;
     }
 
-    
     public void DeductPlayerLives()
     {
         if (isIncinvibile) return;
@@ -213,7 +250,7 @@ public class PlayerData : MonoBehaviour
             {
                 powerUp.powerUpHolder.SetActive(false);
             }
-            gameEventSO.OnGameOver?.Invoke();
+            gameEventSO.OnGameOver?.Invoke(false);
             this.gameObject.SetActive(false);
         }
     }
@@ -227,6 +264,7 @@ public class PlayerData : MonoBehaviour
         {
             StopCoroutine(coinIncrement);
         }
+        SoundManager.Instance.CoinCollect();
         coinIncrement = StartCoroutine(I_IncreaseCoinAmount());
     }
     IEnumerator I_IncreaseCoinAmount()

@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUp
   spriteRenderer: {fileID: -5765277537577446248}
   powerUpType: 3
-  gameEventSO: {fileID: 11400000, guid: 94fabf1dc50ee3f43b6f37cefec81caf, type: 2}
+  gameEventsSO: {fileID: 11400000, guid: 94fabf1dc50ee3f43b6f37cefec81caf, type: 2}
 --- !u!212 &-5765277537577446248
 SpriteRenderer:
   m_ObjectHideFlags: 0

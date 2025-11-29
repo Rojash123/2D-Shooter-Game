@@ -11,14 +11,17 @@ public class PowerupManager : MonoBehaviour
     public Transform powerUpParent;
 
     [SerializeField] GameEventsSO gameEventsSO;
-    private void Start()
+
+    private void Awake()
     {
         gameEventsSO.OnCometDestroyedAfterHit += SendBacktoPool;
         gameEventsSO.OnEnemyDestroyedAfterHit += SpawnCoinEnemy;
         gameEventsSO.OnObstaclesDestroyedAfterHit += SpawnCoinObstacle;
         gameEventsSO.OnPowerUpDestroyed += OnpowerUpDestroyed;
-        gameEventsSO.OnDataLoadedAndUpdated +=OnSaveDataLoadUpdateScriptable;
-        InitializePool();
+        gameEventsSO.OnDataLoadedAndUpdated += OnSaveDataLoadUpdateScriptable;
+    }
+    private void Start()
+    {
     }
     void InitializePool()
     {
@@ -32,7 +35,6 @@ public class PowerupManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (PlayerMovement.Instance == null) return;
         gameEventsSO.OnCometDestroyedAfterHit -= SendBacktoPool;
         gameEventsSO.OnEnemyDestroyedAfterHit -= SpawnCoinEnemy;
         gameEventsSO.OnObstaclesDestroyedAfterHit -= SpawnCoinObstacle;
@@ -61,7 +63,8 @@ public class PowerupManager : MonoBehaviour
 
     void OnSaveDataLoadUpdateScriptable(SaveData data)
     {
-
+        powerUpSo.SetUpdatedData(data);
+        InitializePool();
     }
 
     public void CheckPowerUpSpawnnable(Vector3 spawnPosition)

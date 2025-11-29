@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db7fb40c6ad8a04b9883e2fd06b66aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
+  gameEventsSO: {fileID: 11400000, guid: 94fabf1dc50ee3f43b6f37cefec81caf, type: 2}
 --- !u!61 &6512227772016995736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1924931625, guid: 4dfcdfae93f3668429b2df6535194bd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

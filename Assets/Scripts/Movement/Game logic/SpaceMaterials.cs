@@ -12,6 +12,24 @@ public class SpaceMaterials : MonoBehaviour,IDamageable
     bool canMove;
 
     [SerializeField] GameEventsSO gameEventsSO;
+
+    private void Awake()
+    {
+        gameEventsSO.OnGameOver += HandleGameOver;
+    }
+    private void OnDestroy()
+    {
+        gameEventsSO.OnGameOver -= HandleGameOver;
+    }
+    void HandleGameOver(bool isQuit)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            Destroy();
+            canMove = false;
+        }
+    }
+
     public void SetSpaceMaterialData(float totalHealth, int coinValue)
     {
         enemyHealthTotal = totalHealth;
@@ -51,6 +69,7 @@ public class SpaceMaterials : MonoBehaviour,IDamageable
     public void TakeDamage(float damageAmount)
     {
         animator.SetTrigger("HitEffect");
+        SoundManager.Instance.HitSound();
         enemyHealth -= damageAmount;
         if (enemyHealth <= 0)
         {

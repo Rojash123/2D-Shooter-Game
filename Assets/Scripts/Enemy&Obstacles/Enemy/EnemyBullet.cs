@@ -6,6 +6,24 @@ public class EnemyBullet : MonoBehaviour
     private bool canMoveForward;
     string bulletType;
     float bulletSpeed;
+    [SerializeField] GameEventsSO gameEventsSO;
+    private void Awake()
+    {
+        gameEventsSO.OnGameOver += HandleGameOver;
+    }
+    private void OnDestroy()
+    {
+        gameEventsSO.OnGameOver -= HandleGameOver;
+    }
+
+    void HandleGameOver(bool isQuit)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            EnemyBulletSpawnner.Instance.OnBulletDestroyed(this, bulletType);
+            canMoveForward = false;
+        }
+    }
 
     public void SetType(string type)
     {
