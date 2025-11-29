@@ -49,6 +49,7 @@ public class CometAndEnemySpawnner : MonoBehaviour
     {
         canSpawnComets = false;
         cometSpawnTime = 0;
+        cometSpeed = 2f;
     }
 
     private void OnDestroy()
