@@ -76,7 +76,7 @@ MonoBehaviour:
   fireRate: 0.2
   coinValue: 5
   spawnPoint: {fileID: 7826034207011433594}
-  gamEventsSO: {fileID: 11400000, guid: 94fabf1dc50ee3f43b6f37cefec81caf, type: 2}
+  gameEventsSO: {fileID: 11400000, guid: 94fabf1dc50ee3f43b6f37cefec81caf, type: 2}
 --- !u!61 &6102225479709477970
 BoxCollider2D:
   m_ObjectHideFlags: 0

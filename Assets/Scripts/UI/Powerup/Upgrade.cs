@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,6 @@ public class Upgrade : MonoBehaviour
     private int cost;
 
     private int intMaxValue;
-
     private Dictionary<int, int> costDictionaryPowerUp = new Dictionary<int, int>()
     {
         {0,500},
@@ -23,7 +23,6 @@ public class Upgrade : MonoBehaviour
         {2,2000},
         {3,5000},
     };
-
     private Dictionary<int, int> costDictionaryBulletUpgrade = new Dictionary<int, int>()
     {
         {0,1000},
@@ -40,7 +39,7 @@ public class Upgrade : MonoBehaviour
             intMaxValue = 4;
             if (powerUpType == PowerUps.None)
             {
-                intMaxValue = 2;
+                intMaxValue = 3;
             }
             if (value < intMaxValue)
             {
@@ -59,10 +58,15 @@ public class Upgrade : MonoBehaviour
             }
             else
             {
-                purchaseBtn.interactable = false;
                 costText.text = "Max";
+                if (powerUpType == PowerUps.None)
+                {
+                    currentValueText.text = $"Firerate {value.ToString()}";
+                    upgradeValueText.text = (value + 1).ToString();
+                }
+                purchaseBtn.onClick.RemoveAllListeners();
+                purchaseBtn.interactable = false;
             }
-
         }
     }
     public float Duration
@@ -78,4 +82,15 @@ public class Upgrade : MonoBehaviour
             }
         }
     }
+
+    private void Start()
+    {
+        purchaseBtn.onClick.AddListener(UpgradeButton);
+    }
+    void UpgradeButton()
+    {
+        purchaseBtn.interactable = false;
+        SaveDataManager.Instance.HandlePurchase(cost, powerUpType,purchaseBtn);
+    }
+    
 }

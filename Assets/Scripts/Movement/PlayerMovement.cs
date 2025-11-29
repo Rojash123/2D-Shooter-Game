@@ -9,7 +9,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
     public PlayerController controller;
     PlayerData _playerData;
     Camera mainCamera;
-    Vector3 offset, initialPoint, initialPlayerPosition;
+    Vector3 offset, initialPoint, initialPlayerPosition,initialPlayerSpawnPosition;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     [SerializeField]
@@ -38,7 +38,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
         base.Awake();
         controller = new PlayerController();
         mainCamera = Camera.main;
-
+        initialPlayerSpawnPosition = transform.position;
         gameEventsSO.OnGameStart += HandleGameStart;
         gameEventsSO.OnGameOver += HandleGameOver;
         gameEventsSO.OnPowerUpPicked += HandlePowerUpPicked;
@@ -57,14 +57,16 @@ public class PlayerMovement : Singleton<PlayerMovement>
         fireTime = 0;
         canFireBullets = true;
         canMove = true;
+        bulletValue =SaveDataManager.Instance.currentData.bulletlevel;
     }
-    void HandleGameOver()
+    void HandleGameOver(bool isQuit)
     {
         controller.Disable();
         canFireBullets = false;
         canMove = false;
         CanSwipe = false;
-        ExplosionEffect();
+        transform.position = initialPlayerSpawnPosition;
+        if(!isQuit)ExplosionEffect();
     }
     void Update()
     {
@@ -80,7 +82,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
         controller.Movement.Touch.started += ctx => StartMovement(ctx);
         controller.Movement.Touch.canceled += ctx => EndMovement(ctx);
     }
-
     void StartMovement(InputAction.CallbackContext context)
     {
         Vector2 screenPos = controller.Movement.Position.ReadValue<Vector2>();
@@ -147,10 +148,10 @@ public class PlayerMovement : Singleton<PlayerMovement>
                                 bullet.GetComponent<Bullets>().canMoveForward = true;
                             }
                         }
+                        SoundManager.Instance.PlayerFire();
                         return;
                     }
                 }
-
                 for (int i = 0; i <= bulletValue + _playerData.increasedMultiRate; i++)
                 {
                     var bullet = bulletPool[i].gameObject;
@@ -159,15 +160,14 @@ public class PlayerMovement : Singleton<PlayerMovement>
                     bulletPool.RemoveAt(i);
                     bullet.GetComponent<Bullets>().canMoveForward = true;
                 }
+                SoundManager.Instance.PlayerFire();
             }
         }
     }
-
     private void initialiZePool()
     {
         InitializeBulletPool();
     }
-
     void InitializeBulletPool()
     {
         for (int i = 0; i < poolSize; i++)
@@ -178,21 +178,19 @@ public class PlayerMovement : Singleton<PlayerMovement>
             bulletPool.Add(bullet.GetComponent<Bullets>());
         }
     }
-
     public void GoBackToPoll(GameObject bullet)
     {
         bullet.SetActive(false);
         bulletPool.Add(bullet.GetComponent<Bullets>());
     }
-
     public void ExplosionEffect()
     {
         mainCamera.GetComponent<CameraShake>().Shake();
         centreExplosion.transform.position = this.transform.position;
         centreExplosion.Play();
         Sparks.Play();
+        SoundManager.Instance.PlayerExplosion();
     }
-
     public void HandlePowerUpPicked(float duration, PowerUps type, Sprite powerUpIcon)
     {
         switch (type)
@@ -201,14 +199,17 @@ public class PlayerMovement : Singleton<PlayerMovement>
                 float increasedfireRate = fireRate * 2;
                 Mathf.Clamp(increasedfireRate, 2, 10);
                 _playerData.HandleFireRatePowerUps(duration, powerUpIcon, increasedfireRate - fireRate);
+                SoundManager.Instance.FireRate();
                 break;
 
             case PowerUps.invincibility:
                 _playerData.HandleInvincibiltyPowerUps(duration, powerUpIcon);
+                SoundManager.Instance.Invincibility();
                 break;
 
             case PowerUps.enhancedAttack:
                 _playerData.HandleMultiShotPowerUps(duration, powerUpIcon, 2);
+                SoundManager.Instance.MultiShot();
                 break;
         }
     }

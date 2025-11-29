@@ -14,7 +14,24 @@ public class Enemy : MonoBehaviour, IDamageable
     Animator animator;
     bool canMove;
 
-    [SerializeField] GameEventsSO gamEventsSO;
+    [SerializeField] GameEventsSO gameEventsSO;
+    private void Awake()
+    {
+        gameEventsSO.OnGameOver += HandleGameOver;
+    }
+    private void OnDestroy()
+    {
+        gameEventsSO.OnGameOver -= HandleGameOver;
+    }
+    void HandleGameOver(bool isQuit)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            Destroy();
+            canMove = false;
+        }
+    }
+
 
     public void SetEnemyData(float totalHealth,float fireRate,int coinValue)
     {
@@ -42,6 +59,7 @@ public class Enemy : MonoBehaviour, IDamageable
         obj.transform.position = spawnPoint.position;
         obj.SetBulletSpeed(bulletSpeed);
         obj.gameObject.SetActive(true);
+        SoundManager.Instance.EnemyFire();
     }
     private void OnEnable()
     {
@@ -72,17 +90,18 @@ public class Enemy : MonoBehaviour, IDamageable
     public void TakeDamage(float damageAmount)
     {
         animator.SetTrigger("HitEffect");
+        SoundManager.Instance.HitSound();
         enemyHealth -= damageAmount;
         if (enemyHealth <= 0)
         {
-            gamEventsSO.OnEnemyDestroyedAfterHit?.Invoke(this, coinValue);
+            gameEventsSO.OnEnemyDestroyedAfterHit?.Invoke(this, coinValue);
             Destroy();
         }
     }
 
     public void Destroy()
     {
-        gamEventsSO.OnEnemyDestroyed?.Invoke(this, coinValue);
+        gameEventsSO.OnEnemyDestroyed?.Invoke(this, coinValue);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

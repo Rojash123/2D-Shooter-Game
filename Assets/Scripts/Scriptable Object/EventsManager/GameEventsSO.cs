@@ -13,5 +13,6 @@ public class GameEventsSO : ScriptableObject
     public Action<SaveData> OnDataLoadedAndUpdated;
 
     public Action OnGameStart;
-    public Action OnGameOver;
+    public Action<bool> OnGameOver;
+    public Action OnstartSpinWheel;
 }

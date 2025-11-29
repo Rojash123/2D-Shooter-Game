@@ -45,9 +45,10 @@ public class CometAndEnemySpawnner : MonoBehaviour
     {
         canSpawnComets = true;
     }
-    void HandleSpawnOnGameEnd()
+    void HandleSpawnOnGameEnd(bool isQuit)
     {
         canSpawnComets = false;
+        cometSpawnTime = 0;
     }
 
     private void OnDestroy()

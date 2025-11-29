@@ -71,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMoveForward: 0
   damageAmount: 35
+  gameEventsSO: {fileID: 11400000, guid: 94fabf1dc50ee3f43b6f37cefec81caf, type: 2}
 --- !u!61 &4820674083628982490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 700993124, guid: 4dfcdfae93f3668429b2df6535194bd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

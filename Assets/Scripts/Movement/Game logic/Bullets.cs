@@ -7,6 +7,24 @@ public class Bullets:MonoBehaviour
 {
     public bool canMoveForward;
     public float damageAmount;
+    [SerializeField] GameEventsSO gameEventsSO;
+    private void Awake()
+    {
+        gameEventsSO.OnGameOver += HandleGameOver;
+    }
+    private void OnDestroy()
+    {
+        gameEventsSO.OnGameOver -= HandleGameOver;
+    }
+
+    void HandleGameOver(bool isQuit)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            PlayerMovement.Instance.GoBackToPoll(this.gameObject);
+            canMoveForward = false;
+        }
+    }
     private void Update()
     {
         if (canMoveForward)

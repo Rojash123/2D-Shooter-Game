@@ -9,7 +9,10 @@ public class PanelLeanScale : MonoBehaviour
     {
         childPanelComponents.transform.localScale = Vector3.zero;
         collectButton.interactable = false;
-        LeanTween.scale(childPanelComponents, Vector3.one, 0.35f).setEaseInOutBounce();
+        LeanTween.scale(childPanelComponents, Vector3.one, 0.35f).setEaseInOutBounce().setOnComplete(() =>
+        {
+            collectButton.interactable = true;
+        });
     }
     private void OnDisable()
     {

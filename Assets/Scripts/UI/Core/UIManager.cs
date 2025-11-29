@@ -8,7 +8,9 @@ using static UnityEditor.Progress;
 public class UIManager : MonoBehaviour
 {
     public List<GameObject> panel;
+    [SerializeField] GameObject player;
     private bool isWheelSpinning;
+    private int doubleValue;
 
     [Space(10)]
     [Header("Data Holders")]
@@ -21,22 +23,37 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject inGameUI;
     [SerializeField] GameObject gamePausedUI;
     [SerializeField] GameObject gameOverUI;
+    [SerializeField] GameObject doubleRewardGameOver, gameOver;
 
     [Space(10)]
     [Header("Reward CollectPanel")]
     [SerializeField] GameObject rewardCollectPanel;
-    [SerializeField] TextMeshProUGUI rewardAmount;
+    [SerializeField] TextMeshProUGUI rewardAmount,coinGameOver;
+    [SerializeField] Button rewardCollectButton;
+    [SerializeField] GameObject loadingAd;
 
     [Space(10)]
     [Header("Buttons")]
     [SerializeField] Button startGameBtn;
     [SerializeField] Button pauseGameBtn;
     [SerializeField] Button unPauseGameBtn;
+    [SerializeField] Button RetryBtn;
+    [SerializeField] Button menuBtn;
+    [SerializeField] Button quitGameBtn;
+    [SerializeField] Button watchAdButton;
+    [SerializeField] Button laterBtn;
+
+
+    [Space(10)]
+    [Header("Stats")]
+    public TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI timeSpent;
+    public TextMeshProUGUI userName;
 
     [Space(10)]
     [Header("PowerUp UpgradeUI")]
     public List<Upgrade> upgradeItemsLits;
-
+    public TextMeshProUGUI walletCoinValue;
 
     private void Awake()
     {
@@ -72,14 +89,31 @@ public class UIManager : MonoBehaviour
     void AssignButtons()
     {
         startGameBtn.onClick.AddListener(StartGame);
+        RetryBtn.onClick.AddListener(StartGame);
         pauseGameBtn.onClick.AddListener(PauseGame);
         unPauseGameBtn.onClick.AddListener(UnpauseGame);
+        menuBtn.onClick.AddListener(GoToHome);
+        quitGameBtn.onClick.AddListener(HandeQuitMidGame);
+        watchAdButton.onClick.AddListener(WatchAd);
+        rewardCollectButton.onClick.AddListener(() => 
+        {
+            rewardCollectButton.interactable = false;
+            rewardCollectPanel.SetActive(false);
+            SoundManager.Instance.UIbuttonClick();
+        });
+        laterBtn.onClick.AddListener(LaterButton);
     }
     void RemoveButtonListeners()
     {
         startGameBtn.onClick.RemoveAllListeners();
+        RetryBtn.onClick.RemoveAllListeners();
         pauseGameBtn.onClick.RemoveAllListeners();
         unPauseGameBtn.onClick.RemoveAllListeners();
+        menuBtn.onClick.RemoveAllListeners();
+        quitGameBtn.onClick.RemoveAllListeners();
+        rewardCollectButton.onClick.RemoveAllListeners();
+        watchAdButton.onClick.RemoveAllListeners();
+        laterBtn.onClick.RemoveAllListeners();
     }
     public void FooterButton(int value)
     {
@@ -89,6 +123,7 @@ public class UIManager : MonoBehaviour
             go.SetActive(false);
         }
         panel[value].SetActive(true);
+        SoundManager.Instance.UIPanelSlide();
     }
 
     #region Listen Events
@@ -96,14 +131,21 @@ public class UIManager : MonoBehaviour
     {
         LobbyUI.SetActive(false);
         inGameUI.SetActive(true);
+        gameOverUI.SetActive(false);
     }
-    void HandlePanelOnGameEnd()
+    void HandlePanelOnGameEnd(bool isQuit)
+    {
+        if (isQuit) return;
+        Invoke(nameof(GameOverUI), 1f);
+    }
+    void GameOverUI()
     {
         gamePausedUI.SetActive(false);
         LobbyUI.SetActive(false);
         gameOverUI.SetActive(true);
+        doubleRewardGameOver.SetActive(true);
+        gameOver.SetActive(false);
     }
-
     void HandleGamePause(bool isPaused)
     {
         Time.timeScale = isPaused ? 0 : 1;
@@ -111,39 +153,64 @@ public class UIManager : MonoBehaviour
     }
     void HandleSpinButtonPress()
     {
-        //show ads and then spin the wheel and provide reward
+        loadingAd.SetActive(true);
+        AdsManager.Instance.ShowRewardedAd(HandleSpinWheelCallBack);
     }
-    void HandleSpinWheelCallBack(bool isSuccess, int amount)
+    void HandleSpinWheelCallBack(bool isSuccess)
     {
+        loadingAd.SetActive(false);
         if (isSuccess)
+        {
+            isWheelSpinning= true;
+            gameEventsSO.OnstartSpinWheel?.Invoke();
+        }
+        else
         {
 
         }
     }
     void HandleWatchAd(int coin)
     {
-        //watch ad and provide reward
+        loadingAd.SetActive(true);
+        AdsManager.Instance.ShowRewardedAd(RewardCallbackFreeCoin);
     }
-    void HandleDoubleReward(int coin)
+    void RewardCallbackFreeCoin(bool isSuccess)
     {
-        //watch ad and provide reward
-    }
-    void RewardCallback(bool isSuccess, int amount)
-    {
+        loadingAd.SetActive(false);
         if (isSuccess)
         {
-            HandleRewardCollect(amount);
+            HandleRewardCollect(200);
+        }
+    }
+
+    void HandleDoubleReward(int coin)
+    {
+        doubleValue = coin;
+        loadingAd.SetActive(true);
+        LaterButton();
+        AdsManager.Instance.ShowRewardedAd(RewardCallbackDouble);
+    }
+    void RewardCallbackDouble(bool isSuccess)
+    {
+        loadingAd.SetActive(false);
+        if (isSuccess)
+        {
+            HandleRewardCollect(doubleValue);
+            rewardAmount.text = (doubleValue * 2).ToString();
+            coinGameOver.text = (doubleValue * 2).ToString();
         }
     }
     void HandleRewardCollect(int coin)
     {
-        PlayerData.UpdateCoinValue(coin);
+        isWheelSpinning = false;
+        SaveDataManager.Instance.HandleScoresAndCoin(coin,0,0);
         rewardAmount.text = coin.ToString();
         rewardCollectPanel.SetActive(true);
+        SoundManager.Instance.CollectReward();
     }
-
     void HandleShopData(SaveData data)
     {
+        walletCoinValue.text=data.coin.ToString();
         foreach (var item in data.powerupdata)
         {
             var upgradeItem = upgradeItemsLits.FirstOrDefault(x => x.powerUpType == item.powerUpType);
@@ -152,26 +219,62 @@ public class UIManager : MonoBehaviour
         }
         var bulletItem = upgradeItemsLits.FirstOrDefault(x => x.powerUpType == PowerUps.None);
         bulletItem.Level = data.bulletlevel;
+        highScoreText.text=data.highScore.ToString("f2");
+        timeSpent.text =  (Mathf.Floor(data.timeSpent/60))+" min";
+        userName.text = data.userName.ToString();
     }
     #endregion
-
     #region AssignFunctionToUI
     private void StartGame()
     {
+        player.SetActive(true);
         gameEventsSO.OnGameStart?.Invoke();
+        SoundManager.Instance.UIbuttonClick();
+        SoundManager.Instance.PlayBackGroundMusicGame();
     }
     private void PauseGame()
     {
         uIEventsSO.OnGamePaused?.Invoke(true);
+        SoundManager.Instance.UIbuttonClick();
+        SoundManager.Instance.PlayBackGroundMusicMenu();
     }
     private void UnpauseGame()
     {
         uIEventsSO.OnGamePaused?.Invoke(false);
+        SoundManager.Instance.UIbuttonClick();
+        SoundManager.Instance.PlayBackGroundMusicGame();
     }
     private void WatchAd()
     {
+        SoundManager.Instance.UIbuttonClick();
         uIEventsSO.OnWatchAdPressed?.Invoke(200);
     }
+    private void GoToHome()
+    {
+        LobbyUI.SetActive(true);
+        inGameUI.SetActive(false);
+        gameOverUI.SetActive(false);
+        player.SetActive(true);
+        SoundManager.Instance.UIbuttonClick();
+        SoundManager.Instance.PlayBackGroundMusicMenu();
+    }
+    private void HandeQuitMidGame()
+    {
+        uIEventsSO.OnGamePaused?.Invoke(false);
+        gameEventsSO.OnGameOver?.Invoke(true);
+        gamePausedUI.SetActive(false);
+        gameOverUI.SetActive(false);
+        inGameUI.SetActive(false);
+        LobbyUI.SetActive(true);
+        SoundManager.Instance.PlayBackGroundMusicMenu();
+    }
+    private void LaterButton()
+    {
+        doubleRewardGameOver.SetActive(false);
+        gameOver.SetActive(true);
+        SoundManager.Instance.GameOver();
+    }
+
     #endregion
 
 }

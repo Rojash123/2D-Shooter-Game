@@ -21,7 +21,23 @@ public class Comets : MonoBehaviour, IDamageable
     public int size;
 
     [SerializeField] GameEventsSO gameEventSO;
+    private void Awake()
+    {
+        gameEventSO.OnGameOver += HandleGameOver;
+    }
+    private void OnDestroy()
+    {
+        gameEventSO.OnGameOver -= HandleGameOver;
+    }
 
+    void HandleGameOver(bool isQuit)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            canMove = false;
+            Destroy();
+        }
+    }
     public void SetCometData(string name, float totalHealth,typeOfComet cometType,int coinValue,int size)
     {
         this.gameObject.name = name;
@@ -74,6 +90,7 @@ public class Comets : MonoBehaviour, IDamageable
     {
         if (!canMove) return;
         animator.SetTrigger("HitEffect");
+        SoundManager.Instance.HitSound();
         cometsHealth -= damageAmount;
         if (cometsHealth <= 0)
         {
