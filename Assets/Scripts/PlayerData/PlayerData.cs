@@ -3,11 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
-using UnityEngine.WSA;
 public class PlayerData : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText, coinText, scoreTextGameOver, coinTextGameOver,coinTextDouble;
