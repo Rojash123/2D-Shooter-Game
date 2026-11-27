@@ -1,3 +1,5 @@
 # ninja log v5
-0	419	7861958450835204	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8a40980d84fd70f
-421	564	7861958452267481	C:/Users/LEGION/source/repos/Rojash123/2D-Shooter-Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a6k5p5p/obj/armeabi-v7a/libswappywrapper.so	92736df992b0591b
+4	985	7915829481324338	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8a40980d84fd70f
+985	1359	7915829485140124	C:/Users/LEGION/source/repos/Rojash123/2D-Shooter-Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a6k5p5p/obj/armeabi-v7a/libswappywrapper.so	92736df992b0591b
+3	144	7915859785031825	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8a40980d84fd70f
+145	376	7915859787400636	C:/Users/LEGION/source/repos/Rojash123/2D-Shooter-Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1a6k5p5p/obj/armeabi-v7a/libswappywrapper.so	92736df992b0591b
